@@ -77,6 +77,14 @@ $(document).keypress(function(){
     }
 })
 
+$(document).touchstart(function(){
+    if(!started) {
+        nextSequence();
+        $("#level-title").text("Level "+level);
+        started = true;
+    }
+})
+
 
 function animatePress(currentColor) {
     $("#"+currentColor).addClass("pressed");
