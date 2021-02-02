@@ -18,7 +18,7 @@ function nextSequence() {
 
 var noOfClicks = 0;
 
-$(".btn").click( function(){
+$(".btn").on('click touch', function(){
     if(started) {
         noOfClicks++;
         var userChosenColor = this.id;
@@ -69,15 +69,7 @@ $(".btn").click( function(){
         // }
 }})
 
-$(document).keypress(function(){
-    if(!started) {
-        nextSequence();
-        $("#level-title").text("Level "+level);
-        started = true;
-    }
-})
-
-$(document).touchstart(function(){
+$(document).on('keypress touch click', function(){
     if(!started) {
         nextSequence();
         $("#level-title").text("Level "+level);
