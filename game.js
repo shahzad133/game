@@ -40,7 +40,7 @@ $(".btn").on('click touch', function(){
                 level = 0;
                 playSound("wrong");
                 $("#level-title").text("Wrong Answer");
-                setTimeout(function(){$("#level-title").text("Press A Key to Start")}, 1000);
+                setTimeout(function(){$("#level-title").text("Tap or Click to Start")}, 1000);
             }
         } else if (noOfClicks === level) {
             if (userChosenColor === gamePattern[noOfClicks-1]) {
@@ -59,7 +59,7 @@ $(".btn").on('click touch', function(){
                 level = 0;
                 playSound("wrong");
                 $("#level-title").text("Wrong Answer");
-                setTimeout(function(){$("#level-title").text("Press A Key to Start")}, 1000);
+                setTimeout(function(){$("#level-title").text("Tap or Click to Start")}, 1000);
             }
 
         }
